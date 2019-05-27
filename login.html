@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head align=center>
+	<title>Login</title>
+	
+	<link rel="stylesheet" href="log.css" type="text/css">
+
+<script type="text/javascript">
+		function chksur(nam)
+{
+    var nam1=new RegExp("^[a-zA-Z.\\s]+$","g");
+    if (!nam.match(nam1))
+    {
+       alert("not a valid username");
+    }
+}
+function chkpwd(pw)
+{
+    if (pw.length < 8)
+    {
+        alert("Enter a password of mim 8 characters");
+    }
+}
+
+</script>
+</head>
+<body align=center >
+	<div class="login-form">
+		
+		<h1>Login Here</h1>
+<form name="fform">
+	
+	<p>Username : <input type="text" name="username" placeholder="Username" onblur="chksur(fform.username.value)" /></p>
+		<p>Password :<input type="password" name="password" placeholder="Password" onblur="chkpwd(fform.password.value)" /></p>
+<br>
+<button type="submit"  value="Login">Login</button>
+	</form>
+
+	
+
+		
+</div>
+</body>
+</html>

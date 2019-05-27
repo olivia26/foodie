@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration</title>
+<link rel="stylesheet" href="log.css" type="text/css">
+<script type="text/javascript">
+		function chksur(nam)
+{
+    var nam1=new RegExp("^[a-zA-Z.\\s]+$","g");
+    if (!nam.match(nam1))
+    {
+       alert("not a valid username");
+    }
+}
+function chkpwd(pw)
+{
+    if (pw.length < 8)
+    {
+        alert("Enter a password of mim 8 characters");
+    }
+}
+
+</script>
+</head>
+<body align="center">
+<div class="login-form">
+
+<H1 align="center">Registration</H1>
+
+	<form method="POST" name="sform" >
+
+				Name :              <input type="text" name="name" placeholder="Enter Name" /><br><br>
+		
+		Email :    <input type="email" id="email" placeholder="Enter Email" /> <br><br>
+		Username :           <input type="text" name="username"  placeholder="username" onblur="chksur(sform.username.value)"/><br><br>
+	
+		Password :          <input type="text" name="password" placeholder="password" onblur="chkpwd(sform.password.value)" /><br><br>
+			<button type="submit" onclick="alert('You are successfully registered!')">Register</button>
+		
+	</form>
+</div>
+</body>
+</html>
